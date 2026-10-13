@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.1 (2026-10-14)
+
+### Fixed
+- Republish after the repo was recreated under the same name (orphaned `0.7.0` package version blocked publishing).
+
 ## 0.7.0 (2026-10-14)
 
 ### Added
