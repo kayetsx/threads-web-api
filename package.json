@@ -1,0 +1,58 @@
+{
+  "name": "@kayetsx/threads-web-api",
+  "version": "0.7.0",
+  "description": "Unofficial Node.js client for Meta's Threads, using the threads.com web API",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "bin": {
+    "threads-web-api": "bin/login.js"
+  },
+  "files": [
+    "src",
+    "bin"
+  ],
+  "scripts": {
+    "login": "node bin/login.js",
+    "test": "node --test",
+    "update-ops": "node bin/update-ops.js",
+    "smoke": "node bin/smoke.js",
+    "smoke:write": "node bin/smoke-write.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "keywords": [
+    "threads",
+    "threads-api",
+    "threads.net",
+    "threads.com",
+    "meta",
+    "instagram",
+    "scraper",
+    "unofficial"
+  ],
+  "author": "kayetsx",
+  "license": "MIT",
+  "dependencies": {
+    "libsodium-wrappers": "^0.7.15",
+    "undici": "^7.30.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kayetsx/threads-web-api.git"
+  },
+  "homepage": "https://github.com/kayetsx/threads-web-api#readme",
+  "bugs": {
+    "url": "https://github.com/kayetsx/threads-web-api/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "types": "./src/index.d.ts"
+}

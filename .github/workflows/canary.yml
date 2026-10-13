@@ -1,0 +1,23 @@
+# Daily live check against threads.com, so a Meta change shows up here before users report it.
+# Needs a repository secret THREADS_COOKIES (the cookie header of a throwaway logged-in account).
+name: Canary
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    if: ${{ vars.CANARY != 'off' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run smoke
+        env:
+          THREADS_COOKIES: ${{ secrets.THREADS_COOKIES }}

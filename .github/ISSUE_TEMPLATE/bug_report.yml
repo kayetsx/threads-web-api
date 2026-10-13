@@ -1,0 +1,33 @@
+name: Bug report
+description: A method fails or returns wrong data
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste session.json, cookies, `fb_dtsg`, `lsd`, `sessionid` or passwords here.**
+  - type: input
+    id: method
+    attributes:
+      label: Method
+      placeholder: searchTags
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error output
+      description: The error message. If it says `execution error` or a doc_id problem, Meta probably changed the API.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: code
+    attributes:
+      label: Code to reproduce
+      render: js
+  - type: input
+    id: versions
+    attributes:
+      label: Node version / library version (commit)
+      placeholder: Node 22.21, commit abc1234

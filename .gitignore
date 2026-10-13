@@ -1,0 +1,7 @@
+node_modules/
+session.json
+.env
+*.tgz
+*-posts.json
+.npmrc
+get-session.js

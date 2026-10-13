@@ -1,0 +1,21 @@
+name: Feature request
+description: Ask for a Threads feature that isn't wrapped yet
+labels: [enhancement]
+body:
+  - type: textarea
+    id: feature
+    attributes:
+      label: What do you want to do?
+      placeholder: Get the list of users who liked a post
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Where does it appear on threads.com?
+      placeholder: https://www.threads.com/@user/post/XXXX → "Likes"
+  - type: input
+    id: operation
+    attributes:
+      label: GraphQL operation name (optional)
+      description: From DevTools → Network → graphql request → fb_api_req_friendly_name
